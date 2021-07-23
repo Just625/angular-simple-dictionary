@@ -1,0 +1,19 @@
+<h3>Add new word</h3>
+<a routerLink="/dictionaries">Back to dictionary</a>
+<p>{{successMsg}}</p>
+<form [formGroup]="wordForm" (ngSubmit)="saveWord()">
+  <table>
+    <tr>
+      <td>Word:</td>
+      <td><input type="text" formControlName="word"></td>
+    </tr>
+    <tr>
+      <td>Meaning:</td>
+      <td><input type="text" formControlName="mean"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Add to dictionary</button></td>
+    </tr>
+  </table>
+</form>

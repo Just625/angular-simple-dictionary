@@ -1,0 +1,9 @@
+<h3>Dictionary page</h3>
+<a routerLink="/dictionaries/create">Add new word</a>
+<input type="text" placeholder="Type word to search" [(ngModel)]="searchWord">
+<button (click)="searchForWord()">Search</button>
+<ul>
+  <li *ngFor="let word of wordList">
+    <a [routerLink]="['/dictionaries/view',word.word]">{{word.word}}</a>
+  </li>
+</ul>
